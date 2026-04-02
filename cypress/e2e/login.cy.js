@@ -28,4 +28,23 @@ describe('Projeto QA Avançado - Testes de Login', () => {
     cy.url().should('not.include', 'password=')
   })
 
+  it('CT005 - Deve realizar login com sucesso limpando espaços em branco no e-mail', () => {
+    cy.visit('login.html')
+
+    // Dados de entrada com espaços propositais antes e depois
+    const emailComEspacos = '  andre@teste.com  '
+    const senhaValida = '123456'
+
+    // Ação: Inserir e-mail com espaços e senha
+    cy.get('[data-cy="input-email"]').type(emailComEspacos)
+    cy.get('[data-cy="input-password"]').type(senhaValida)
+    
+    // Executa o clique
+    cy.get('[data-cy="btn-login"]').click()
+
+    // Validação (Critério de Aceite): 
+    // O sistema deve processar o e-mail sem os espaços na URL final
+    cy.url().should('include', 'email=andre%40teste.com')
+  })
+
 })
