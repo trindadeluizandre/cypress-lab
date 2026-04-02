@@ -61,3 +61,10 @@ Modo Headless (CLI): npx cypress run
 Author: Andre Luiz Trindade.
 Role: QA Analyst.
 Project Status: Active Development.
+
+Relatorio de Execucao de Testes - 02/04/2026
+Status da Suite: Passou (100%)
+Testes Executados: 03
+Falhas: 00
+
+Destaque: O CT005 validou a resiliencia do campo de e-mail contra espacos em branco (trim), garantindo a integridade dos dados enviados ao processamento.
