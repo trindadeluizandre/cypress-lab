@@ -7,7 +7,9 @@ The objective of this project is to implement and maintain a suite of automated 
 Technical Stack
 Automation Framework: Cypress 13.0.0 or higher.
 
-Programming Language: JavaScript.
+Programming Language: JavaScript (ES6+).
+
+Reporting: Mochawesome (HTML/JSON visual reports).
 
 Runtime Environment: Node.js.
 
@@ -28,33 +30,35 @@ CT006: Verification of white space preservation within the password string (Acce
 
 CT007: Functional validation of navigation flow to the Registration module.
 
-Execution Procedures
-Prerequisites: Ensure that the Node.js environment is correctly configured on the local machine.
-Installation:
+Laboratório de Automação Cypress / Cypress Automation Laboratory
+Este repositório serve como um ambiente técnico para o desenvolvimento de Garantia de Qualidade de Software (QA) e Testes Automatizados. Está estruturado para demonstrar capacidades de teste E2E (ponta a ponta) utilizando o framework Cypress.
 
-Bash
-git clone https://github.com/trindadeluizandre/cypress-lab.git
-npm install
-Test Execution:
+Escopo do Projeto
+O objetivo deste projeto é implementar e manter uma suíte de testes automatizados para aplicações web. O repositório foca em validação funcional, testes de regressão e aplicação de metodologias de QA padrão da indústria.
 
-Interactive Mode (Cypress Runner): npx cypress open
+Stack Técnica
+Framework de Automação: Cypress 13.0.0 ou superior.
 
-Headless Mode (CLI): npx cypress run
+Linguagem de Programação: JavaScript (ES6+).
 
-Relatório de Execução de Testes - 02/04/2026
-Status da Suíte: Passou (100%)
-Testes Executados: 05
-Falhas: 00
+Relatórios: Mochawesome (Relatórios visuais em HTML/JSON).
 
-Destaques de QA e Observações Técnicas:
-CT005: Validou a resiliência do campo de e-mail contra espaços em branco (trim), garantindo a integridade dos dados enviados ao processamento.
+Ambiente de Execução: Node.js.
 
-CT006: Confirmou a conformidade com o requisito de negócio que exige a preservação de caracteres de espaço na string de senha para fins de segurança e hashing.
+Ambiente de Desenvolvimento: Visual Studio Code.
 
-CT007: Validou a integridade do seletor e a transição de estado da aplicação para a rota de cadastro.
+Controle de Versão: Git / GitHub.
 
-Heurística de Usabilidade: Durante a validação manual do fluxo de cadastro (Registration Flow), foi identificada a ausência de um manipulador de estado de sucesso (Success State Handler). O formulário realiza o reset dos campos sem fornecer feedback visual ao usuário, o que pode impactar negativamente a experiência do usuário (UX). Recomenda-se a implementação de um componente de notificação (Toast ou Modal) após o evento de submissão.
+Documentação dos Casos de Teste
+Suíte: Autenticação e Acesso do Usuário.
 
-Author: Andre Luiz Trindade.
-Role: QA Analyst.
-Project Status: Active Development.
+CT003: Validação de autenticação bem-sucedida e persistência de parâmetros de URL.
+
+CT004: Validação de restrições de campos obrigatórios para a senha.
+
+CT005: Validação da resiliência do campo de e-mail contra espaços em branco (Trim).
+
+CT006: Verificação da preservação de espaços em branco na senha (Critério de Aceite).
+
+CT007: Validação funcional do fluxo de navegação para o módulo de Cadastro.
+
